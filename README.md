@@ -1,5 +1,5 @@
 # QEMU
-This repo contains instructions in order to create a Virtual Machine based of Fedora with qemu
+This repo contains instructions to create a Virtual Machine based of Fedora with qemu
 
 # Requirements
 - Download qcow2 image from [Fedora](https://alt.fedoraproject.org/cloud/) or choose image from [openstack](https://docs.openstack.org/image-guide/obtain-images.html)
@@ -32,3 +32,6 @@ qemu-system-x86_64 \
 -netdev user,id=net0,hostfwd=tcp::10022-:22 \
 -drive file=./fedora33.qcow2,if=virtio 
 ```
+
+# Access to Virtual Machine
+```ssh -p 10022 cloud@localhost```
